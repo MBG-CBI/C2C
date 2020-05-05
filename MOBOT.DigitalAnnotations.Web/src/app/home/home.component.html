@@ -1,0 +1,18 @@
+<div>
+
+  <div class="row">
+    <div class="col-8">
+      <div class="page-wrapper">
+        <img #img [src]="annotationSource?.sourceUrl" (load)="onImageLoaded(img)" />
+        <app-render-canvas [targets]="annotationSource?.targets" [height]="height" [width]="width"></app-render-canvas>
+        <app-cover-canvas [height]="height" [width]="width"></app-cover-canvas>
+        <app-selected-canvas [height]="height" [width]="width"></app-selected-canvas>
+      </div>
+
+    </div>
+
+    <div class="col-4">
+      <app-annotation-list #annotationList></app-annotation-list>
+    </div>
+  </div>
+</div>

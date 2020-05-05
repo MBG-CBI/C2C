@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <!-- <button mat-icon-button (click)="toggleSideNav()">
+      <mat-icon>menu</mat-icon>
+    </button> -->
+    <a class="nav-link" routerLink="home" routerLinkActive="active"><img src="assets/mobot.gif" alt="Home"></a>
+    Digital Annotations
+    <span style="flex: 1 1 auto"></span>
+    <mat-menu #userMenu [overlapTrigger]="false" >
+      <button *ngIf="isLoggedIn" mat-button (click)="logout()"><mat-icon>input</mat-icon><span> Logout</span></button>
+      <button *ngIf="!isLoggedIn" mat-button (click)="logIn()"><mat-icon>input</mat-icon><span> LogIn</span></button>
+    </mat-menu>
+    <mat-chip-list>
+      <mat-chip color="accent" [matMenuTriggerFor]="userMenu">
+        <button mat-button><i class="material-icons" [style.color]="getPersonColor()">person</i></button>
+      </mat-chip>
+    </mat-chip-list>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<app-login></app-login>
+
+

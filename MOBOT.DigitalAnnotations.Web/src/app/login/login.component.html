@@ -1,0 +1,49 @@
+<div class="modal fade" id="login-dialog" tabindex="-1" role="dialog" aria-labelledby="login-dialogTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="login-dialogTitle">Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="loginForm" novalidate>
+          <ng-container *ngIf="showError">
+            <div class="row">
+              <span class="text-danger">The User Name or Password is invalid. Please try again.</span>
+            </div>
+
+          </ng-container>
+
+          <div class="form-group row">
+            <span class="col-sm-2" class="material-icons">
+              email
+            </span>
+            <!-- <label for="userName">Email</label> -->
+            <div class="col-sm-5">
+              <input type="email" (keydown.enter)="login()"
+                class="form-control" [ngClass]="{ 'is-invalid': userName.invalid }"
+                formControlName="userName" placeholder="Enter email" autocomplete="username">
+            </div>
+            <small *ngIf="userName.errors?.required" class="text-danger">Email is required.</small>
+          </div>
+          <div class="form-group row">
+            <span class="col-sm-2" class="material-icons">
+              lock
+            </span>
+            <div class="col-sm-5">
+              <input (keydown.enter)="login()" type="password" class="form-control" [ngClass]="{ 'is-invalid': password.errors?.required }"
+              formControlName="password" placeholder="Password" autocomplete="current-password">
+            </div>
+            <small *ngIf="password.errors?.required" class="text-danger">Password is required.</small>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" (click)="login()" class="btn btn-primary" [disabled]="loginForm.invalid">Login</button>
+      </div>
+    </div>
+  </div>
+</div>

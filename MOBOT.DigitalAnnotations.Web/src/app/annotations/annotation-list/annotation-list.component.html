@@ -1,0 +1,13 @@
+<div class="annotation-filter-container col-12">
+  <app-annotation-filter></app-annotation-filter>
+</div>
+<div class="annotations-container col-12">
+  <div class="annotations-view" *ngFor="let annotation of annotations; index as i">
+    <app-annotation-detail [index]="i" [length]="annotations.length" [annotation]="annotation"></app-annotation-detail>
+  </div>
+  <div class="row" *ngIf="annotations.length > 0">
+    <div class="col-12">
+      <button class="btn btn-primary" type="button" (click)="newAnnotation()" [style.visibility]="canAdd()">Add</button>
+    </div>
+  </div>
+</div>
