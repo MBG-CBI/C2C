@@ -3,6 +3,17 @@
 
 "Consumers as Creators: Understanding the annotation needs of the scientific community through the domain of botany" is a project whose goals are to analyze botanical researchers’ annotation needs and develop a prototype of how those needs may be met within a digital library platform." 
 
+{% highlight javascript %} alert(1); {% endhighlight %}
+
+```js
+alert( 1); 
+```
+  
+<script type="text/javascript">
+alert(1);
+</script>
+  
+  
 The intended outcome of the *Consumers as Creators* project is to illuminate literature annotation needs of scientific and other research communities by honing in on the annotation needs of a well-defined user group in systematic botany.  To that end, it seeks to analyze botanical researchers’ annotation needs and develop a prototype of how those needs may be met within a digital library platform. 
 
 The initial proposal was to choose one of the evaluated existing tools as a proof-of-concept prototype and install it within a virtual library to demonstrate the functional capacity to address the previously identified requeriments.  It was also planned to integrate RERUM within a digital library platform (in our case, we had chose Botanicus because of the availability) as a proof-of-concept on how an existing annotation tool could support the different types of annotations needs that the botanical users may have.  But, despite the different tools available each with its own approach, by the time of this research, there is not one unique annotation tool of the ones evaluated that fulfills all desired annotation functionalities of botanists that were identified, even if we consider only the mandatory ones.  It is recognizable there are several that cover thoroughly certain parts of the range of in their domains of specialization (annotating webpages, images' annotation, lightweight implementation, semantic annotation, workflow support, among others).
